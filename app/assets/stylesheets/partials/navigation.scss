@@ -1,3 +1,13 @@
 .navbar {
   background-color: $black;
 }
+.navbar-brand {
+  font-family: $brandFont;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: $blue;
+}
+nav {
+  font-size: 1.7em;
+  font-family: $mainFont;
+}
