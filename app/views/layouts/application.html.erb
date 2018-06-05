@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => 'image/x-icon' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'false' %>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu" rel="stylesheet">
   </head>
 
@@ -16,6 +16,7 @@
 
     <div class="offset-sm-1 col-sm-10 main-content">
       <%= yield %>
+
     </div>
 
   </body>

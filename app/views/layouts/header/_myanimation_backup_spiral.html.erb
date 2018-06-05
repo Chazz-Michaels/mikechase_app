@@ -1,0 +1,129 @@
+
+<canvas id="myAnimation"></canvas>
+
+<script>
+
+var canvas = document.getElementById('myAnimation');
+var ctx = canvas.getContext('2d');
+
+var bg = '#143c7f';
+var green = '#8fe612';
+var blue = '#2979ff';
+var purple = '#5B3CC8';
+var black = '#090614';
+
+canvas.style.backgroundColor = bg;
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight/2;
+
+var dotX = 10;
+var dotY = 10;
+var dotRadius = 5;
+var moveX = 20;
+var moveY = 20;
+var dotXReset = 10;
+var dotYReset = 10;
+
+var erase = false;
+
+// Make a dot top
+function drawDot(){
+  changeColor();
+  dotRadius = Math.random()*8;
+  ctx.beginPath();
+  ctx.arc(dotX, dotY, dotRadius, 0, 2*Math.PI, false);
+  ctx.arc(dotXB, dotYB, dotRadius, 0, 2*Math.PI, false);
+  ctx.stroke();
+}
+
+// Make lots of dots starting on from the top
+function drawLotsOfDotsTop(){
+  if(dotX <= canvas.width){
+    drawDot();
+    dotX += moveX;
+  }else{
+    dotX = dotXReset;
+    dotY += moveY;
+    drawDot();
+  }
+}
+
+var dotXB = canvas.width - 10;
+var dotYB = canvas.height - 10;
+var moveXB = 20;
+var moveYB = 20;
+var dotXResetB = canvas.width - 10;
+var dotYResetB = canvas.height - 10;
+
+// Make lots of dots starting on from the top
+function drawLotsOfDotsBottom(){
+  if(dotXB > 0){
+    drawDot();
+    dotXB -= moveXB;
+  }else{
+    dotXB = dotXResetB;
+    dotYB -= moveYB;
+    drawDot();
+  }
+}
+
+// Choose random color for Dots
+function changeColor(){
+  let x = Math.random()*4;
+  if(x > 0 && x < 1){ctx.strokeStyle = green}
+  if(x > 1 && x < 2){ctx.strokeStyle = blue}
+  if(x > 2 && x < 3){ctx.strokeStyle = purple}
+  if(x > 3 && x < 4){ctx.strokeStyle = black}
+}
+
+
+// Event listener for mouse over
+canvas.addEventListener("mouseover", mouseOver, false);
+
+function mouseOver(e){
+  let oldColor = ctx.strokeStyle;
+  ctx.strokeStyle = 'white';
+
+}
+
+function logic(){
+  if(dotY >= canvas.height/2 && dotYB <= canvas.height/2){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    dotY = dotYReset;
+    dotYB = dotYResetB;
+  }
+}
+
+
+// Animate ================================================ //
+
+//variables to control FPS
+var fps, fpsInterval, startTime, now, then, elapsed;
+fps = 30;
+fpsInterval = 1000 / fps;
+then = Date.now();
+startTime = then;
+
+
+function animate(){
+  now = Date.now();
+  elapsed = now - then;
+  if (elapsed > fpsInterval) {
+    then = now - (elapsed % fpsInterval);
+
+    // the animation code
+    //ctx.clearRect(0, 0, canvas.width, canvas.height);
+    logic();
+    drawLotsOfDotsTop();
+    drawLotsOfDotsBottom();
+
+
+
+  } // if(elapsed > fpsInterval)
+  requestAnimationFrame(animate);
+} // animate();
+animate();
+
+
+</script>
