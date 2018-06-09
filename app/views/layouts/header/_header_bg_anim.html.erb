@@ -20,14 +20,18 @@ var black = '#090614';
 canvas.style.backgroundColor = bgBlue;
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight/2;
+canvas.height = window.innerHeight/4;
+
+ctx.filter = 'blur(1px)';
+
 
 // Top Dots ===================================================== //
 var dotX = 10;
 var dotY = 10;
 var dotRadius = 5;
 var moveX = 20;
-var moveY = 20;
+//var moveY = 20;
+var moveY = canvas.height/12;
 var dotXReset = 10;
 var dotYReset = 10;
 
@@ -60,7 +64,8 @@ function drawLotsOfDotsTop(){
 var dotXB = canvas.width - 10;
 var dotYB = canvas.height - 10;
 var moveXB = 20;
-var moveYB = 20;
+//var moveYB = 20;
+var moveYB = canvas.height/12;
 var dotXResetB = canvas.width - 10;
 var dotYResetB = canvas.height - 10;
 

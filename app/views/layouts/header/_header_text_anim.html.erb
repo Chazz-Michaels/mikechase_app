@@ -1,22 +1,31 @@
 
-<div class="col-sm-6 offset-sm-3 text-center on-top" id="text-carousel">
+<div class="col-sm-10 offset-sm-1 text-center on-top" id="text-carousel">
 
 
-  <h1>Hello, my name is Mike.</h1>
-  <h1>I am a
+  <h2>Hello, my name is Mike.</h2>
+  <h2>I am a
     <span
        class="txt-rotate"
        data-period="1000"
-       data-rotate='[ "Rails developer.", "Javascript lover.", "Personal Trainer.", "Musician." ]'>
+       data-rotate='[ "Rails developer.", "personal trainer.", "musician." ]'>
     </span>
-  </h1>
+  </h2>
 
 
 </div>
 
+<!--
 <script>
   var placement = document.getElementById('text-carousel');
-  //placement.style.backgroundColor = 'purple';
-  //placement.style.top = 0.5*canvas.height;
-  console.log(canvas.height);
+
+  var innerHeight = window.innerHeight;
+  var quarterHeight = innerHeight*0.25;
+  var navbarOffset = 50;
+  var carouselOffset = 80/2;
+  var desiredTop = quarterHeight - navbarOffset - carouselOffset;
+
+  placement.style.top = desiredTop + 'px';
+
+
 </script>
+-->
