@@ -1,6 +1,46 @@
 <!-- About - Bio -->
-<div class="row text-center">
-  <div class="col-sm-7 bio-box">
-    <%= image_tag('me.jpg', id:'my-pic') %>
+<div class="bio-wrapper">
+
+<div class="row">
+
+  <!-- Left Column -->
+  <div class="col-sm-6 d-flex justify-content-center">
+    <!-- My Pic -->
+    <div class="nonagon-outside">
+      <div class="nonagon-inside grayscale no-blur"></div>
+    </div>
+
   </div>
-</div>
+
+
+  <!-- Right Column -->
+  <div class="col-sm-6 d-flex justify-content-center" style="background:tomato">
+
+  </div>
+
+
+</div> <!-- close first .row -->
+
+
+<div class="row">
+  <!-- Left Column -->
+  <div class="col-sm-6">
+    <!-- Write-up about me -->
+    <div class="text-center">
+      <h3>Who's this guy?</h3>
+      <div class="location">Boston, Ma
+        <div class="glyph wiggle-me wiggle-text">
+          <%= image_tag('mapmarker.png', id:'map-marker') %>
+        </div>
+      </div>
+      <div class="about-me-text">
+        I'm a Ruby on Rails developer, with a passion for creating
+        responsive, cutting-edge designs and animations.
+      </div>
+    </div>
+  </div>
+
+</div> <!-- close second .row -->
+
+
+</div> <!-- close .bio-wrapper -->
