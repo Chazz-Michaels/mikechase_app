@@ -1,7 +1,10 @@
-.icon-control {
-  max-width: 100px;
-  margin: 0em 2em 0em 2em;
+.about-header {
+  background-color: rgba($blue, 0.1);
+  padding: 1rem 0.2rem 1rem 0.2rem;
+  border-radius: 1rem 0.9rem 1rem 0.9rem;
+  /*filter: blur(10px);*/
+  transition: background-color 3s;
 }
-#icons-wrapper {
-
+.about-header:hover {
+  background-color: rgba($blue, 0.8);
 }
