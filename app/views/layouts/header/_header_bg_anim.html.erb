@@ -6,47 +6,44 @@
 var canvas = document.getElementById('myAnimation');
 var ctx = canvas.getContext('2d');
 
+// Colors
 var bgBlue = '#143c7f';
-//old bgGreen = #8c967e
 var bgGreen = '#1c2e03';
 var bgPurple = '#2d1e64';
 var bgGray = '#ebe9f1';
-
 var green = '#8fe612';
 var blue = '#2979ff';
 var purple = '#5B3CC8';
 var black = '#090614';
 
-canvas.style.backgroundColor = bgBlue;
-
-canvas.width = window.innerWidth;
+// Size and style canvas
 canvas.height = window.innerHeight/4;
+canvas.width = $('body').width();
+canvas.style.backgroundColor = bgBlue;
+// Add more blur here for more ambience
+ctx.filter = 'blur(0.5px)';
 
-ctx.filter = 'blur(1px)';
 
-
-// Top Dots ===================================================== //
-var dotX = 10;
-var dotY = 10;
-var dotRadius = 5;
-var moveX = 20;
-//var moveY = 20;
+// Initialize top dot variables
+var dotX = canvas.width/144;
+var dotY = canvas.height/24;
+var moveX = canvas.width/72;
 var moveY = canvas.height/12;
-var dotXReset = 10;
-var dotYReset = 10;
+var dotXReset = canvas.width/144;
+var dotYReset = canvas.height/24;
 
-var erase = false;
+var dotRadius = canvas.width/288;
 
-// Make a dot top
+// Make a single dot, from top down
 function drawDot(){
   changeColor();
-  dotRadius = Math.random()*8;
+  dotRadius = Math.random()*(canvas.width/180);
   ctx.beginPath();
   ctx.arc(dotX, dotY, dotRadius, 0, 2*Math.PI, false);
   ctx.stroke();
 }
 
-// Make lots of dots starting on from the top
+// Make lots of dots starting from the top
 function drawLotsOfDotsTop(){
   if(dotX <= canvas.width){
     drawDot();
@@ -57,22 +54,20 @@ function drawLotsOfDotsTop(){
     drawDot();
   }
 }
-// ============================================================== //
 
 
-// Bottom Dots ===================================================//
-var dotXB = canvas.width - 10;
-var dotYB = canvas.height - 10;
-var moveXB = 20;
-//var moveYB = 20;
+// Initialize bottom dot variables
+var dotXB = canvas.width - (canvas.width/144);
+var dotYB = canvas.height - (canvas.height/24);
+var moveXB = canvas.width/72;
 var moveYB = canvas.height/12;
-var dotXResetB = canvas.width - 10;
-var dotYResetB = canvas.height - 10;
+var dotXResetB = canvas.width - (canvas.width/144);
+var dotYResetB = canvas.height - (canvas.height/24);
 
-// Make a dot bottom
-function drawDotB(){
+// Make a single dot, from bottom up
+function drawDotBottom(){
   changeColor();
-  dotRadius = Math.random()*8;
+  dotRadius = Math.random()*(canvas.width/180);
   ctx.beginPath();
   ctx.arc(dotXB, dotYB, dotRadius, 0, 2*Math.PI, false);
   ctx.stroke();
@@ -81,18 +76,16 @@ function drawDotB(){
 // Make lots of dots starting on from the bottom
 function drawLotsOfDotsBottom(){
   if(dotXB > 0){
-    drawDotB();
+    drawDotBottom();
     dotXB -= moveXB;
   }else{
     dotXB = dotXResetB;
     dotYB -= moveYB;
-    drawDotB();
+    drawDotBottom();
   }
 }
 
-// ============================================================== //
-
-// Choose random color for Dots
+// Choose random color for dots
 function changeColor(){
   let x = Math.random()*4;
   if(x > 0 && x < 1){ctx.strokeStyle = green}
@@ -112,8 +105,7 @@ function changeBackground() {
 
 // Logic to change colors and reset canvas once complete
 function logic(){
-  if(dotY >= canvas.height/2 && dotYB <= canvas.height/2){
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if(dotY >= canvas.height/2 || dotYB <= canvas.height/2){
     changeBackground();
     dotY = dotYReset;
     dotYB = dotYResetB;
@@ -121,7 +113,7 @@ function logic(){
 }
 
 
-// Animate ================================================ //
+// === Animate === //
 
 //variables to control FPS
 var fps, fpsInterval, startTime, now, then, elapsed;
@@ -137,18 +129,13 @@ function animate(){
   if (elapsed > fpsInterval) {
     then = now - (elapsed % fpsInterval);
 
-    // the animation code
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
     logic();
     drawLotsOfDotsTop();
     drawLotsOfDotsBottom();
 
-
-
-  } // if(elapsed > fpsInterval)
+  } // close if(elapsed > fpsInterval)
   requestAnimationFrame(animate);
-} // animate();
+} // close animate();
 animate();
-
 
 </script>
