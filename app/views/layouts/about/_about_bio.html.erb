@@ -1,45 +1,22 @@
 <!-- About - Bio -->
 <div class="bio-wrapper">
 
+
 <div class="row">
-
-  <!-- Left Column -->
-  <div class="col-sm-6 d-flex justify-content-center">
-    <!-- My Pic -->
-    <div class="nonagon-outside">
-      <div class="nonagon-inside grayscale no-blur"></div>
-    </div>
-
-  </div>
-
-
-  <!-- Right Column -->
-  <div class="col-sm-6 d-flex justify-content-center" style="background:tomato">
-
-  </div>
-
-
+  <!-- Left Column: bio pic in nonagon shape -->
+  <%= render 'layouts/about/bio/bio_picture' %>
+  <!-- Right Column: technology/ languages used -->
+  <%= render 'layouts/about/bio/bio_tech' %>
 </div> <!-- close first .row -->
 
 
 <div class="row">
-  <!-- Left Column -->
+  <!-- Left Column: bio write up under bio pic -->
+  <%= render 'layouts/about/bio/bio_write_up' %>
+  <!-- Right Column: technology / languages used CONTINUED... -->
   <div class="col-sm-6">
-    <!-- Write-up about me -->
-    <div class="text-center">
-      <h3>Who's this guy?</h3>
-      <div class="location">Boston, Ma
-        <div class="glyph wiggle-me wiggle-text">
-          <%= image_tag('mapmarker.png', id:'map-marker') %>
-        </div>
-      </div>
-      <div class="about-me-text">
-        I'm a Ruby on Rails developer, with a passion for creating
-        responsive, cutting-edge designs and animations.
-      </div>
-    </div>
-  </div>
 
+  </div>
 </div> <!-- close second .row -->
 
 
