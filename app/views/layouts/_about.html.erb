@@ -1,57 +1,10 @@
-<h1 class="text-center">ABOUT</h1>
+<div class="about-wrapper">
 
-<!-- About Headers -->
-<div class="row text-center">
-  <div class="col-sm-3"><h2 class="about-header">Quick</h2></div>
-  <div class="col-sm-3"><h2 class="about-header">Responsive</h2></div>
-  <div class="col-sm-3"><h2 class="about-header">Dynamic</h2></div>
-  <div class="col-sm-3"><h2 class="about-header">Friendly</h2></div>
-</div>
+  <h1 class="text-center">ABOUT</h1>
 
-<!-- About Icons -->
-<div class="row text-center">
-  <div class="col-sm-3 wiggle-me">
-    <%= image_tag('icon_quick.png', class:'icon-control') %>
-  </div>
-  <div class="col-sm-3 wiggle-me">
-    <%= image_tag('icon_responsive.png', class:'icon-control') %>
-  </div>
-  <div class="col-sm-3 wiggle-me">
-    <%= image_tag('icon_dynamic.png', class:'icon-control') %>
-  </div>
-  <div class="col-sm-3 wiggle-me">
-    <%= image_tag('icon_friendly.png', class:'icon-control') %>
-  </div>
-</div>
+  <%= render 'layouts/about/about_headers' %>
+  <%= render 'layouts/about/about_icons' %>
+  <%= render 'layouts/about/about_blurbs' %>
+  <%= render 'layouts/about/about_bio' %>
 
-<!-- About Blurbs -->
-<div class="row text-center">
-
-  <div class="col-sm-3 about-blurb">
-    <div class="blurb-text">
-      Speed is my highest priority. In the day of instant gratification,
-      <div class="wiggle-me wiggle-text">who wants to wait?</div>
-    </div>
-  </div>
-
-  <div class="col-sm-3 about-blurb">
-    <div class="blurb-text">
-      My designs will fit any device,
-      <div class="wiggle-me wiggle-text">in style.</div>
-    </div>
-  </div>
-
-  <div class="col-sm-3 about-blurb">
-    <div class="blurb-text">
-      My passion for animations drives me to create pages that
-      <div class="wiggle-me wiggle-text">come to life.</div>
-    </div>
-  </div>
-
-  <div class="col-sm-3 about-blurb">
-    <div class="blurb-text">
-      UX is everything! My designs are intuitive and
-      fun to <div class="wiggle-me wiggle-text">interact with.</div>
-    </div>
-  </div>
 </div>
