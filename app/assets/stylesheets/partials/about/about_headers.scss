@@ -1,0 +1,11 @@
+.about-header {
+  background-color: rgba($purple, 0.01);
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  border-radius: 0.9rem 1rem 0.9rem 1rem;
+  transition: background-color 3s, padding 1s, border-radius 1s;
+}
+.about-header:hover {
+  background-color: rgba($blue, 0.5);
+  padding: 0.6rem 0.2rem 0.6rem 0.2rem;
+  border-radius: 1rem 0.9rem 1rem 0.9rem;
+}
