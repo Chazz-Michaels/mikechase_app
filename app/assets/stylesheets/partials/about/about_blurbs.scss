@@ -1,3 +1,13 @@
 .blurb-text {
   font-size: 1.6em;
 }
+.wiggle-text {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-color: rgba($lightgray, 0.01);
+  transition: text-decoration-color 2s;
+}
+div.wiggle-text:hover {
+  text-decoration: underline;
+  text-decoration-color: $black;
+}
