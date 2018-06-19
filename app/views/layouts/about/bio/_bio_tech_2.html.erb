@@ -1,0 +1,89 @@
+<div class="col-sm-6" id="techWindow">
+
+  <div id="tech-table">
+    <span class="tech-row">
+      <div class="javascript tech text-center">JavaScript</div>
+      <div class="slide" id="javascriptSlide">80%</div>
+    </span>
+    <span class="tech-row">
+      <div class="html5 tech text-center">HTML5</div>
+      <div class="slide" id="html5Slide">60%</div>
+    </span>
+    <span class="tech-row">
+      <div class="css3 tech text-center">CSS3</div>
+      <div class="slide" id="css3Slide">80%</div>
+    </span>
+    <span class="tech-row">
+      <div class="ruby tech text-center">Ruby</div>
+      <div class="slide" id="rubySlide">50%</div>
+    </span>
+    <span class="tech-row">
+      <div class="ruby_on_rails tech text-center">Ruby on Rails</div>
+      <div class="slide" id="rubyonrailsSlide">90%</div>
+    </span>
+    <span class="tech-row">
+      <div class="sass tech text-center">Sass</div>
+      <div class="slide" id="sassSlide">50%</div>
+    </span>
+    <span class="tech-row">
+      <div class="Bootstrap tech text-center">Bootstrap</div>
+      <div class="slide" id="bootstrapSlide">60%</div>
+    </span>
+    <span class="tech-row">
+      <div class="jquery tech text-center">jQuery</div>
+      <div class="slide" id="jquerySlide">50%</div>
+    </span>
+    <span class="tech-row">
+      <div class="angularjs tech text-center">AngularJS</div>
+      <div class="slide" id="angularjsSlide">30%</div>
+    </span>
+    <span class="tech-row">
+      <div class="postgresql tech text-center">PostgreSQL</div>
+      <div class="slide" id="postgresqlSlide">40%</div>
+    </span>
+    <span class="tech-row">
+      <div class="gimp tech text-center">GIMP</div>
+      <div class="slide" id="gimpSlide">80%</div>
+    </span>
+  </div>
+
+
+
+</div>
+
+<script>
+
+  var fullWidth = $('#tech-table').width();
+
+  $(document).ready( function(){
+
+      $(window).scroll( function() {
+          $('.slide').show();
+          let toggle1 = $("#javascriptSlide").width() == 0.8*fullWidth ? "0" : 0.8*fullWidth;
+          $('#javascriptSlide').animate({ width: toggle1 });
+          let toggle2 = $("#html5Slide").width() == 0.6*fullWidth ? "0" : 0.6*fullWidth;
+          $('#html5Slide').animate({ width: toggle2 });
+          let toggle3 = $("#css3Slide").width() == 0.8*fullWidth ? "0" : 0.8*fullWidth;
+          $('#css3Slide').animate({ width: toggle3 });
+          let toggle4 = $("#rubySlide").width() == 0.5*fullWidth ? "0" : 0.5*fullWidth;
+          $('#rubySlide').animate({ width: toggle4 });
+          let toggle5 = $("#rubyonrailsSlide").width() == 0.9*fullWidth ? "0" : 0.9*fullWidth;
+          $('#rubyonrailsSlide').animate({ width: toggle5 });
+          let toggle6 = $("#sassSlide").width() == 0.5*fullWidth ? "0" : 0.5*fullWidth;
+          $('#sassSlide').animate({ width: toggle6 });
+          let toggle7 = $("#bootstrapSlide").width() == 0.6*fullWidth ? "0" : 0.6*fullWidth;
+          $('#bootstrapSlide').animate({ width: toggle7 });
+          let toggle8 = $("#jquerySlide").width() == 0.5*fullWidth ? "0" : 0.5*fullWidth;
+          $('#jquerySlide').animate({ width: toggle8 });
+          let toggle9 = $("#angularjsSlide").width() == 0.3*fullWidth ? "0" : 0.3*fullWidth;
+          $('#angularjsSlide').animate({ width: toggle9 });
+          let toggle10 = $("#postgresqlSlide").width() == 0.4*fullWidth ? "0" : 0.4*fullWidth;
+          $('#postgresqlSlide').animate({ width: toggle10 });
+          let toggle11 = $("#gimpSlide").width() == 0.8*fullWidth ? "0" : 0.8*fullWidth;
+          $('#gimpSlide').animate({ width: toggle11 });
+
+      });
+  });
+
+
+</script>

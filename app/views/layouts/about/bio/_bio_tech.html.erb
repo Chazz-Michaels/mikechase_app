@@ -1,3 +1,84 @@
-<div class="col-sm-6 d-flex justify-content-center" style="background:tomato">
+<div class="col-sm-6" id="techWindow" style="background:tomato">
+
+<canvas id="tech-anim-canvas"></canvas>
+
+
+<script>
+  var canv = document.getElementById('tech-anim-canvas');
+  var context = canv.getContext('2d');
+  canv.style.backgroundColor = 'black';
+  canv.style.width = $('.col-sm-6').width();;
+  context.font = 'inherit';
+
+  var tech = [ 'javascript',
+               'html',
+               'css',
+               'sass',
+               'ruby',
+               'ruby_on_rails',
+               'angularjs',
+               'bootstrap',
+               'jquery',
+               'postgresql',
+               'gimp'
+             ]
+  var counter = 0;
+  var newText = true;
+  var text_y = Math.random()*(canvas.height - 0);
+  var text_x = canv.width;
+
+  function makeText(){
+    if(newText == true){
+      context.fillStyle = 'white';
+      context.fillText(tech[counter], text_x, text_y);
+      counter++;
+    }else{
+      return;
+    }
+  }
+  function checkText(){
+    if(text_x < canv.length/2){
+      newText = true;
+    }
+    else{
+      newText = false;
+    }
+  }
+  function moveText(){
+    text_x-=20;
+  }
+
+  function oneText(){
+    context.fillStyle = 'white';
+    context.font = '8px arial';
+    context.fillText(tech[counter], text_x, 30);
+    text_x--;
+  }
+
+ var fps_t, fpsInterval_t, startTimet, nowt, thent, elapsedt;
+ fps_t = 80;
+ fpsInterval_t = 1000 / fps_t;
+ thent = Date.now();
+ startTimet = thent;
+
+
+ function animateTech(){
+   nowt = Date.now();
+   elapsedt = nowt - thent;
+   if (elapsedt > fpsInterval_t) {
+     thent = nowt - (elapsedt % fpsInterval_t);
+     context.clearRect(0, 0, canv.width, canv.height);
+     //checkText();
+    // makeText();
+     //moveText();
+     oneText();
+
+
+   } // close if(elapsed > fpsInterval_t)
+   requestAnimationFrame(animateTech);
+ } // close animateTech();
+ animateTech();
+
+</script>
 
 </div>
