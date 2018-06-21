@@ -1,0 +1,50 @@
+.projects-wrapper {
+  background: rgba($black, 0.6);
+  height: 800px;
+}
+.project-link {
+  width: inherit;
+  height: 100%;
+  display: block;
+  margin: 1em 0em;
+  border: 2px solid rgba($black, 0.4);
+  text-decoration: none !important;
+}
+.project-image {
+  width: inherit;
+  height: 100%;
+  filter: grayscale(0.2);
+  transition: border 2s, filter 2s;
+}
+
+.project-hover {
+  background-color: $lightgray;;
+  display: none;
+  width: inherit;
+  height: 100%;
+  color: $black;
+}
+.project-title-on-hover {
+  font-size: 2.4em;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1em;
+}
+.project-languages-on-hover {
+  font-size: 1.6em;
+  display: inline-block;
+  margin-top: 1em;
+}
+.learn-more-on-hover {
+  font-size: 2em;
+  display: inline-block;
+  border: 2px solid $purple;
+  border-radius: 2%;
+  margin-top: 1em;
+  padding: 0.6em 0.5em;
+  background-color: rgba($purple, 0.1);
+}
+#projects {
+  color: $lightgray;
+  margin: 1em 0em;
+}

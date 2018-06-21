@@ -1,0 +1,23 @@
+<a href="#" class="project-link" id="donutninja">
+  <%= image_tag('project-donutninja.png', class:'project-image') %>
+  <div class="project-hover">
+    <span class="project-title-on-hover">Donut Ninja</span>
+    <br>
+    <span class="project-languages-on-hover">Javascript</span>
+    <br>
+    <div class="learn-more-on-hover wiggle-me">Learn More</div>
+  </div>
+</a>
+
+<script>
+  $('#donutninja').hover(
+    function(){
+      $(this).find('.project-image').hide();
+      $(this).find('.project-hover').fadeIn();
+    },
+    function(){
+      $(this).find('.project-hover').hide();
+      $(this).find('.project-image').fadeIn();
+    }
+  );
+</script>

@@ -1,0 +1,23 @@
+<a href="#" class="project-link" id="whatsyournumber">
+  <%= image_tag('project-whatsyournumber.png', class:'project-image') %>
+  <div class="project-hover">
+    <span class="project-title-on-hover">What's Your Number?</span>
+    <br>
+    <span class="project-languages-on-hover">Ruby on Rails, AngularJS</span>
+    <br>
+    <div class="learn-more-on-hover wiggle-me">Learn More</div>
+  </div>
+</a>
+
+<script>
+  $('#whatsyournumber').hover(
+    function(){
+      $(this).find('.project-image').hide();
+      $(this).find('.project-hover').fadeIn();
+    },
+    function(){
+      $(this).find('.project-hover').hide();
+      $(this).find('.project-image').fadeIn();
+    }
+  );
+</script>

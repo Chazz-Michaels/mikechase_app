@@ -1,0 +1,23 @@
+<a href="#" class="project-link" id="profilo">
+  <%= image_tag('project-profilo.png', class:'project-image') %>
+  <div class="project-hover">
+    <span class="project-title-on-hover">Profilo Day Spa</span>
+    <br>
+    <span class="project-languages-on-hover">UX Design, Wireframing</span>
+    <br>
+    <div class="learn-more-on-hover wiggle-me">Learn More</div>
+  </div>
+</a>
+
+<script>
+  $('#profilo').hover(
+    function(){
+      $(this).find('.project-image').hide();
+      $(this).find('.project-hover').fadeIn();
+    },
+    function(){
+      $(this).find('.project-hover').hide();
+      $(this).find('.project-image').fadeIn();
+    }
+  );
+</script>
