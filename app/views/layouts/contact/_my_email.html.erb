@@ -1,0 +1,19 @@
+<div class="row my-email">
+  <div class="col-sm-12">
+    <textarea readonly class="text-center" id="my-email-address" style="overflow:hidden">michaelchasedev@gmail.com
+    </textarea>
+    <br>
+    <button id="copy-button" onclick="copyText()" >
+      <div class="wiggle-me">Copy email to clipboard</div>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyText(){
+  var email = document.getElementById("my-email-address");
+    email.select();
+    document.execCommand("copy");
+    alert("Copied the text: " + email.value);
+}
+</script>
