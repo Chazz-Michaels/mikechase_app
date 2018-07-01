@@ -28,4 +28,12 @@
 
 
 </script>
+
+<script>
+  var placement = document.getElementById('text-carousel');
+  var animHeight = document.getElementById('myAnimation');
+  var $difference = $(animHeight).height() - $(placement).height();
+  placement.style.top = ($difference) + 'px';
+
+</script>
 -->
