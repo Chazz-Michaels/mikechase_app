@@ -2,9 +2,13 @@
 
   <h1 class="text-center" id="about">ABOUT</h1>
 
-  <%= render 'layouts/about/about_headers' %>
-  <%= render 'layouts/about/about_icons' %>
-  <%= render 'layouts/about/about_blurbs' %>
+  <div class="row">
+    <%= render 'layouts/about/about_quick' %>
+    <%= render 'layouts/about/about_responsive' %>
+    <div class="clear-medium"></div>
+    <%= render 'layouts/about/about_dynamic' %>
+    <%= render 'layouts/about/about_friendly' %>
+  </div>
   <%= render 'layouts/about/about_bio' %>
 
 </div>

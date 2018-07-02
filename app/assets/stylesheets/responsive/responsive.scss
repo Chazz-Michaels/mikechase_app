@@ -1,0 +1,36 @@
+@media screen and (max-width: 580px) {
+  .nonagon-outside {
+    width: 40vmin;
+    height: 40vmin;
+  }
+  #techWindow {
+    min-width: 400px;
+  }
+  .tiny {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 580px) {
+  .clear-medium {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+  .about-attr {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+  }
+  .nonagon-outside {
+    width: 20vmin;
+    height: 20vmin;
+  }
+  #techWindow {
+    min-width: 100px;
+  }
+  .tiny {
+    display: none;
+  }
+}
