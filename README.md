@@ -1,6 +1,8 @@
 # README
 
-This is my professional portfolio, in development. Keep an eye out for new commits!
+This is my professional portfolio. Check it out at:
+
+www.michaelchasedev.com
 
 Created with Ruby on Rails
 
