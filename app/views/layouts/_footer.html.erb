@@ -1,10 +1,32 @@
-<div id="footer-wrapper" style="background:tomato">
+<div id="footer-wrapper">
 
-  <h1 class="text-center" id="footer">FOOTER</h1>
+  <h1 class="text-center" id="footer"></h1>
 
   <div class="row text-center">
-    <div class="col-sm-12">
+    <div class="col-sm-12"><span id="change-color">Design</span> by Michael Chase | 2018 &copy;
     </div>
   </div>
 
 </div>
+
+
+<script>
+var color_counter = 0;
+var colors = [
+  '#5B3CC8',
+  '#8fe612',
+  '#2979ff',
+  'tomato',
+  '#dbdadf'
+];
+var word = document.getElementById('change-color');
+
+setInterval(function(){
+    word.style.color = colors[color_counter];
+    color_counter++;
+    if(color_counter > colors.length){
+      color_counter = 0;
+    }
+}, 1000);
+
+</script>
