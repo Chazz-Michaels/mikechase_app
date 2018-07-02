@@ -9,8 +9,43 @@
   .tiny {
     display: inline;
   }
+  .project-title-on-hover {
+    font-size: 2.4em;
+    margin-top: 1.2em;
+  }
+  .project-languages-on-hover {
+    font-size: 1.6em;
+    margin-top: 1em;
+  }
+  .learn-more-on-hover {
+    margin-top: 1;
+    margin-bottom: 1em;
+  }
 }
-
+@media screen and (max-width: 767px) and (min-width: 580px) {
+  .clear-small {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+  .proj-slide-left {
+    display: block;
+    margin: auto;
+  }
+  .project-title-on-hover {
+    font-size: 2em;
+    margin-top: 0.8em;
+  }
+  .project-languages-on-hover {
+    font-size: 1.2em;
+    margin-top: 0.4em;
+  }
+  .learn-more-on-hover {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+  }
+}
 @media screen and (max-width: 1000px) and (min-width: 580px) {
   .clear-medium {
     content: "";
